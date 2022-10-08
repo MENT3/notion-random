@@ -20,9 +20,9 @@ You are ready to deploy it :
 2. Go to [Vercel.com](http://vercel.com)
 3. Create new project
 4. Select this repo
-5. Choose Next.js for the techo
+5. Choose Next.js as techo
 6. Create the env variable NOTION_API_TOKEN that contains your integration secret token
 7. Create the env variable NOTION_DATABASE that contains your database ID
 8. Click on "Deploy"
 
-Well done 🚀
+Well done ! 🚀
