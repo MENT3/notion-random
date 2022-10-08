@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a very small project that aims to embed into Notion.so. Its goal is to randomly pick a page from a database, like a flashcard tool 🪧
 
-## Getting Started
+![example](doc/example.png)
 
-First, run the development server:
+# How to deploy
 
-```bash
-npm run dev
-# or
-yarn dev
+Before, you need to create an integration to get an Notion API key. To this follow [the documentation](https://developers.notion.com/docs/getting-started)
+
+Now you have to link the database where you want to get the informations from and your new integration. To this, go to your database page in Notion, click on "..." then click on "Add connections" and choose your integration
+
+And since you are on Notion get the id of your database from the url:
+```
+https://www.notion.so/myworkspace/a8aec43384f447ed84390e8e42c2e089?v=...
+                                  |--------- Database ID --------|
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You are ready to deploy it :
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. Fork it
+2. Go to [Vercel.com](http://vercel.com)
+3. Create new project
+4. Select this repo
+5. Choose Next.js for the techo
+6. Create the env variable NOTION_API_TOKEN that contains your integration secret token
+7. Create the env variable NOTION_DATABASE that contains your database ID
+8. Click on "Deploy"
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Well done 🚀
