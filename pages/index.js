@@ -11,7 +11,7 @@ export default function Home({ page }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const notion = new Client({ auth: process.env.NOTION_API_TOKEN })
   const databaseId = process.env.NOTION_DATABASE
 
